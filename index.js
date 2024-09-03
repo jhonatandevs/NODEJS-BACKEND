@@ -9,7 +9,8 @@ const app= express();
 app.set('view engine','pug');
 app.set('views','./views')
 
-
+//Carpetas publicas
+app.use(express.static('public'))
 //Routing 
 /** use: Busca las rutas parecidas get: busca las exactas */
 app.use('/auth',usuarioRoutes);
