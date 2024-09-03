@@ -4,9 +4,15 @@ import usuarioRoutes from './routes/usuarioRoutes.js'
 /** Creando la app o servidor */
 const app= express();
 
+//HABILITAR PUG
+
+app.set('view engine','pug');
+app.set('views','./views')
+
+
 //Routing 
 /** use: Busca las rutas parecidas get: busca las exactas */
-app.use('/',usuarioRoutes);
+app.use('/auth',usuarioRoutes);
 
 
 
@@ -16,6 +22,8 @@ app.use('/',usuarioRoutes);
 // app.get('/nosotros',(req, res)=>{
 //     res.json({msg:'Informacion de nosotros'})
 // })
+
+
 /** Definir puerto */
 const port= 4000;
 

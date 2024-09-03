@@ -3,8 +3,8 @@ const router= express.Router();
 //Routing 
 
 //Separadas/
-router.get('/',(req, res)=>{
-    res.send('Hola Mundo en Express')
+router.get('/login',(req, res)=>{
+    res.render('auth/login.pug')
 })
 router.post('/',(req, res)=>{
     res.json({msg:'RESPUESTA DEL POST'})
