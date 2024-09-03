@@ -7,8 +7,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./index.js",
-    "server": "nodemon index.js",
-    "css": "postcss public/css/tailwind.css -o public/css/app.css"
+    "server": "nodemon index.js && postcss public/css/tailwind.css -o public/css/app.css ",
+    "css": "postcss public/css/tailwind.css -o public/css/app.css --watch"
   },
   "keywords": [
     "MVC",
@@ -20,11 +20,14 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.19.2",
+    "mysql2": "^3.11.0",
     "node-udemy": "file:",
-    "pug": "^3.0.3"
+    "pug": "^3.0.3",
+    "sequelize": "^6.37.3"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
+    "concurrently": "^8.2.2",
     "nodemon": "^3.1.4",
     "postcss": "^8.4.44",
     "postcss-cli": "^11.0.0",
