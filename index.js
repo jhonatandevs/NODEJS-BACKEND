@@ -10,6 +10,9 @@ const app = express();
 app.set('view engine', 'pug');
 app.set('views', './views')
 
+
+//Habilitar lectura de datos en formularios
+app.use(express.urlencoded({extended:true}))
 //Conexion db
 try {
     await db.authenticate();

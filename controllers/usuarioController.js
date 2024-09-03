@@ -13,9 +13,12 @@ const formularioOlvidePassword =(req, res)=>{
        pagina: "Recupera tu acceso a Bienes Raices"
     })
 }
-
+const registrar =(req,res)=>{
+console.log("REGISTRANDO--",req.body)
+}
 export {
     formularioLogin,
     formularioRegistro,
-    formularioOlvidePassword
+    formularioOlvidePassword,
+    registrar
 }

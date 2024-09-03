@@ -7,7 +7,7 @@ block contenido
         //p Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis molestiae doloribus dolores totam odio quaerat facilis nesciunt eius eum in commodi, voluptas deserunt eveniet aliquid amet, recusandae explicabo sed autem!
         .mt-8.mx-auto.max-w-md   
             .bg-white.py-8.px-4.shadow
-                form.space-y-5
+                form.space-y-5(method='POST' action="/auth/registro")
                     div
                         label.block.txt-sm.uppercase.text-gray-400.font-bold(for="nombre") Tu nombre
                         input#nombre.w-full.px-3.py-2.border.border-gray-300.rounded-md.placeholder-gray-400(placeholder="Escribe aqui tu nombre" type="text" name="nombre")
